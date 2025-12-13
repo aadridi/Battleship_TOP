@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/aadridi/Battleship_TOP/issues"
   },
-  "homepage": "https://github.com/aadridi/Battleship_TOP#readme"
+  "homepage": "https://github.com/aadridi/Battleship_TOP#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
 }
