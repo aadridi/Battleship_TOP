@@ -1,24 +1,24 @@
 {
-  "name": "battleship_top",
-  "version": "1.0.0",
-  "description": "A repo regarding Battleship TOP project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aadridi/Battleship_TOP.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/aadridi/Battleship_TOP/issues"
-  },
-  "homepage": "https://github.com/aadridi/Battleship_TOP#readme",
-  "devDependencies": {
-    "jest": "^30.2.0"
-  }
+	"name": "battleship_top",
+	"version": "1.0.0",
+	"description": "A repo regarding Battleship TOP project",
+	"main": "index.mjs",
+	"scripts": {
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aadridi/Battleship_TOP.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/aadridi/Battleship_TOP/issues"
+	},
+	"homepage": "https://github.com/aadridi/Battleship_TOP#readme",
+	"devDependencies": {
+		"jest": "^30.2.0"
+	}
 }
