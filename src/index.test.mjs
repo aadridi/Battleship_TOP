@@ -1,5 +1,6 @@
 import { Ship } from './Ship.mjs';
 import { Gameboard } from './Gameboard.mjs';
+import { Player } from './Player.mjs';
 
 describe('Ship', () => {
 	test('creates a ship with a given length', () => {
@@ -147,5 +148,40 @@ describe('Game over condition', () => {
 		board.receiveAttack([1, 0]);
 
 		expect(board.allShipSunk()).toBe(true);
+	});
+});
+
+/* ------------------------- */
+
+describe('Player factory', () => {
+	test('creates a player with a name', () => {
+		const player = Player('Alice', 'human');
+
+		expect(player.playerName).toBe('Alice');
+	});
+
+	test('creates a player with a type', () => {
+		const player = Player('Bob', 'computer');
+
+		expect(player.playerType).toBe('computer');
+	});
+
+	test('creates a player with a gameboard', () => {
+		const player = Player('Alice', 'human');
+
+		expect(player.playerGameboard).toBeDefined();
+	});
+
+	test('playerGameboard is an instance created by Gameboard()', () => {
+		const player = Player('Alice', 'human');
+
+		expect(player.playerGameboard.getBoard).toBeInstanceOf(Function);
+	});
+
+	test('each player has its own gameboard (no shared state)', () => {
+		const player1 = Player('Alice', 'human');
+		const player2 = Player('Bob', 'computer');
+
+		expect(player1.playerGameboard).not.toBe(player2.playerGameboard);
 	});
 });
